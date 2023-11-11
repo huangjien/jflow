@@ -1,18 +1,19 @@
-FROM node:21.1.0-slim AS deps
+FROM node:18-alpine AS deps
 RUN apk add --no-cache libc6-compat
 WORKDIR /app
 
 COPY package.json package-lock.json yarn.lock ./
+RUN yarn upgrade
 RUN  yarn install --production
 
-FROM node:21.1.0-slim AS builder
+FROM node:18-alpine AS builder
 WORKDIR /app
 COPY --from=deps /app/node_modules ./node_modules
 COPY . .
 
 
 ENV NEXT_TELEMETRY_DISABLED 1
-
+# RUN yarn upgrade
 RUN yarn build
 
 FROM node:18-alpine AS runner

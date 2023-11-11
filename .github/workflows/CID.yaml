@@ -45,7 +45,7 @@ jobs:
 
       - uses: actions/setup-node@v3
         with:
-          node-version: 18
+          node-version: 21
 
       - run: npm install
       - run: yarn install
@@ -62,7 +62,7 @@ jobs:
           gcloud run deploy blog \
             --quiet \
             --region "$RUN_REGION" \
-            --image "docker.io/huangjien/website:latest" \
+            --image "docker.io/huangjien/jflow:latest" \
             --platform "managed" \
             --port 8080 \
             --allow-unauthenticated
