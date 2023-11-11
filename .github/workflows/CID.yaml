@@ -59,7 +59,7 @@ jobs:
       - name: Deploy
         id: deploy
         run: |-
-          gcloud run deploy blog \
+          gcloud run deploy jflow \
             --quiet \
             --region "$RUN_REGION" \
             --image "docker.io/huangjien/jflow:latest" \
