@@ -22,6 +22,10 @@
     "return_length": "我們從 AI 收到了答案。\n答案長度"
   },
   "header": {
+    "suite": "套件",
+    "case": "案例",
+    "data": "資料",
+    "page": "頁面",
     "ai": "人工智慧",
     "home": "首頁",
     "settings": "設定",
