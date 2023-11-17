@@ -1,11 +1,11 @@
-import { defineConfig, devices } from '@playwright/test'
-import path from 'path'
+import { defineConfig, devices } from '@playwright/test';
+import path from 'path';
 
 // Use process.env.PORT by default and fallback to port 3000
-const PORT = process.env.PORT || 8080
+const PORT = process.env.PORT || 8080;
 
 // Set webServer.url and use.baseURL with the location of the WebServer respecting the correct set port
-const baseURL = `http://localhost:${PORT}`
+const baseURL = `http://localhost:${PORT}`;
 
 // Reference: https://playwright.dev/docs/test-configuration
 export default defineConfig({
@@ -69,11 +69,10 @@ export default defineConfig({
       name: 'Mobile Chrome',
       use: {
         ...devices['Pixel 5'],
-        headless:true,
+        headless: true,
         screenshot: true,
         video: true,
       },
     },
-    
   ],
-})
+});

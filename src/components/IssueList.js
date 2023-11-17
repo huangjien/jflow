@@ -40,7 +40,7 @@ export const IssueList = ({ tags, ComponentName, data, inTab = 'ai' }) => {
   });
   const [page, setPage] = useState(1);
   const [audioSrc, setAudioSrc] = useState('');
-  const [pages,setPages] = useState(Math.ceil(data?.length / rowsPerPage));
+  const [pages, setPages] = useState(Math.ceil(data?.length / rowsPerPage));
   const { isOpen, onOpen, onOpenChange } = useDisclosure();
   const { languageCode, speakerName } = useSettings();
   const [filterValue, setFilterValue] = useState('');

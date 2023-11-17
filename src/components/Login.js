@@ -132,7 +132,12 @@ const Login = () => {
                   <p color="inherit">{user.email}</p>
                 </DropdownItem>
 
-                <DropdownItem key="logout" onClick={logout} withDivider color="error">
+                <DropdownItem
+                  key="logout"
+                  onClick={logout}
+                  withDivider
+                  color="error"
+                >
                   {t('header.logout')}
                 </DropdownItem>
               </DropdownMenu>

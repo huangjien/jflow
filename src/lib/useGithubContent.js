@@ -1,7 +1,4 @@
-import {
-  useRequest,
-  useLocalStorageState,
-} from 'ahooks';
+import { useRequest, useLocalStorageState } from 'ahooks';
 import { useEffect, useState } from 'react';
 import { getIssues, getReadme, getValueByPath } from './Requests';
 import { useSettings } from './useSettings';

@@ -1,57 +1,54 @@
 // For format details, see https://aka.ms/devcontainer.json. For config options, see the
 // README at: https://github.com/devcontainers/templates/tree/main/src/javascript-node
 {
-	"name": "website",
-	// Or use a Dockerfile or Docker Compose file. More info: https://containers.dev/guide/dockerfile
-	"build": {
-        "dockerfile": "Dockerfile",
-        "context": ".."
-      },
-	// Features to add to the dev container. More info: https://containers.dev/features.
-	"features": {
-		"ghcr.io/devcontainers/features/docker-in-docker:2": {},
-		"ghcr.io/devcontainers-contrib/features/curl-apt-get:1": {},
-		// "ghcr.io/devcontainers-contrib/features/jfrog-cli-npm:1": {},
-		//"ghcr.io/devcontainers-contrib/features/jmeter-sdkman:2": {},
-		// "ghcr.io/devcontainers/features/python:1": {}
-	  },
-	
-	  "overrideFeatureInstallOrder": [
-		"ghcr.io/devcontainers/features/common-utils",
-		"ghcr.io/devcontainers/features/git",
-		"ghcr.io/devcontainers/features/github-cli:1",
-		"ghcr.io/devcontainers-contrib/features/curl-apt-get:1",
-		"ghcr.io/devcontainers-contrib/features/zsh-plugins",
-		"ghcr.io/devcontainers/features/docker-in-docker"
-		//"ghcr.io/jungaretti/features/make:1"
-	  ],
+  "name": "website",
+  // Or use a Dockerfile or Docker Compose file. More info: https://containers.dev/guide/dockerfile
+  "build": {
+    "dockerfile": "Dockerfile",
+    "context": ".."
+  },
+  // Features to add to the dev container. More info: https://containers.dev/features.
+  "features": {
+    "ghcr.io/devcontainers/features/docker-in-docker:2": {},
+    "ghcr.io/devcontainers-contrib/features/curl-apt-get:1": {}
+    // "ghcr.io/devcontainers-contrib/features/jfrog-cli-npm:1": {},
+    //"ghcr.io/devcontainers-contrib/features/jmeter-sdkman:2": {},
+    // "ghcr.io/devcontainers/features/python:1": {}
+  },
 
-	// Use 'forwardPorts' to make a list of ports inside the container available locally.
-	"forwardPorts": [8080],
+  "overrideFeatureInstallOrder": [
+    "ghcr.io/devcontainers/features/common-utils",
+    "ghcr.io/devcontainers/features/git",
+    "ghcr.io/devcontainers/features/github-cli:1",
+    "ghcr.io/devcontainers-contrib/features/curl-apt-get:1",
+    "ghcr.io/devcontainers-contrib/features/zsh-plugins",
+    "ghcr.io/devcontainers/features/docker-in-docker"
+    //"ghcr.io/jungaretti/features/make:1"
+  ],
 
-	// Use 'postCreateCommand' to run commands after the container is created.
-	"postCreateCommand": "yarn playwright install; yarn playwright install-deps",
+  // Use 'forwardPorts' to make a list of ports inside the container available locally.
+  "forwardPorts": [8080],
 
-	// Configure tool-specific properties.
-	// "customizations": {},
-	
-	"mounts": [
-		
-		"source=workspacesVolume,target=/workspaces,type=volume"
-	],
+  // Use 'postCreateCommand' to run commands after the container is created.
+  "postCreateCommand": "yarn playwright install; yarn playwright install-deps",
 
-	// Uncomment to connect as root instead. More info: https://aka.ms/dev-containers-non-root.
-	"remoteUser": "root",
-	"customizations": {
-		"vscode": {
-			"extensions": [
-				"ms-playwright.playwright",
-				"dbaeumer.vscode-eslint",
-				"VisualStudioExptTeam.vscodeintellicode",
-				"VisualStudioExptTeam.intellicode-api-usage-examples",
-				"VisualStudioExptTeam.vscodeintellicode-completions",
-				"VisualStudioExptTeam.vscodeintellicode-insiders"
-			]
-		}
-	}
+  // Configure tool-specific properties.
+  // "customizations": {},
+
+  "mounts": ["source=workspacesVolume,target=/workspaces,type=volume"],
+
+  // Uncomment to connect as root instead. More info: https://aka.ms/dev-containers-non-root.
+  "remoteUser": "root",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-playwright.playwright",
+        "dbaeumer.vscode-eslint",
+        "VisualStudioExptTeam.vscodeintellicode",
+        "VisualStudioExptTeam.intellicode-api-usage-examples",
+        "VisualStudioExptTeam.vscodeintellicode-completions",
+        "VisualStudioExptTeam.vscodeintellicode-insiders"
+      ]
+    }
+  }
 }
