@@ -1,7 +1,7 @@
 {
-  "name": "Personal Website of Jien Huang",
-  "short_name": "blog",
-  "description": "A Personal Website of Jien Huang, with AI embeded",
+  "name": "Automation Test",
+  "short_name": "at",
+  "description": "Automation Test with Flow",
   "scope": "/",
   "start_url": "/",
   "display": "standalone",
@@ -14,13 +14,13 @@
       "type": "image/png"
     },
     {
-      "src": "/icon-256x256.png",
-      "sizes": "256x256",
+      "src": "/icon-180x180.png",
+      "sizes": "180x180",
       "type": "image/png"
     },
     {
-      "src": "/icon-384x384.png",
-      "sizes": "384x384",
+      "src": "/icon-32x32.png",
+      "sizes": "32x32",
       "type": "image/png"
     },
     {

@@ -10,7 +10,7 @@ import remarkGfm from 'remark-gfm';
 export const Comment = ({ issue_id }) => {
   /**
    * Fetches and displays comments related to a specific issue.
-   * 
+   *
    * @param {number} issue_id - The ID of the issue for which comments should be fetched.
    * @returns {JSX.Element} - The rendered component.
    */

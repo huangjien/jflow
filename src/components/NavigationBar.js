@@ -50,8 +50,8 @@ export const NavigationBar = () => {
               src="/favicon.png"
               alt="brand"
               isZoomed
-              width={32}
-              height={32}
+              width={64}
+              height={64}
             />
           </DropdownTrigger>
           <DropdownMenu
