@@ -15,7 +15,16 @@ import { Link } from '@nextui-org/link';
 import { Spacer } from '@nextui-org/spacer';
 import { useTranslation } from 'react-i18next';
 import { Image } from '@nextui-org/image';
-import { BiChip, BiCog, BiDetail, BiHome } from 'react-icons/bi';
+import {
+  BiBriefcase,
+  BiBuildings,
+  BiChip,
+  BiCog,
+  BiDetail,
+  BiHome,
+  BiData,
+  BiLayer,
+} from 'react-icons/bi';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import Login from './Login';
@@ -70,6 +79,26 @@ export const NavigationBar = () => {
                 <BiChip size="2em" /> {t('header.ai')}
               </Link>
             </DropdownItem>
+            <DropdownItem>
+              <Link href="/suite" underline="active">
+                <BiBuildings size="2em" /> {t('header.suite')}
+              </Link>
+            </DropdownItem>
+            <DropdownItem>
+              <Link href="/case" underline="active">
+                <BiBriefcase size="2em" /> {t('header.case')}
+              </Link>
+            </DropdownItem>
+            <DropdownItem>
+              <Link href="/data" underline="active">
+                <BiData size="2em" /> {t('header.data')}
+              </Link>
+            </DropdownItem>
+            <DropdownItem>
+              <Link href="/page" underline="active">
+                <BiLayer size="2em" /> {t('header.page')}
+              </Link>
+            </DropdownItem>
             {isAuthenticated() && (
               <DropdownItem>
                 <Link href="/settings" underline="active">
@@ -94,6 +123,26 @@ export const NavigationBar = () => {
         <NavbarItem className="hidden lg:block">
           <Link href="/ai" underline="active">
             <BiChip size="2em" /> {t('header.ai')}
+          </Link>
+        </NavbarItem>
+        <NavbarItem className="hidden lg:block">
+          <Link href="/suite" underline="active">
+            <BiBuildings size="2em" /> {t('header.suite')}
+          </Link>
+        </NavbarItem>
+        <NavbarItem className="hidden lg:block">
+          <Link href="/case" underline="active">
+            <BiBriefcase size="2em" /> {t('header.case')}
+          </Link>
+        </NavbarItem>
+        <NavbarItem className="hidden lg:block">
+          <Link href="/data" underline="active">
+            <BiData size="2em" /> {t('header.data')}
+          </Link>
+        </NavbarItem>
+        <NavbarItem className="hidden lg:block">
+          <Link href="/page" underline="active">
+            <BiLayer size="2em" /> {t('header.page')}
           </Link>
         </NavbarItem>
         {isAuthenticated() && (

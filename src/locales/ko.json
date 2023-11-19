@@ -22,6 +22,10 @@
     "return_length": "AI에서 답변을 받았습니다.\n답변 길이"
   },
   "header": {
+    "suite": "스위트",
+    "case": "케이스",
+    "data": "데이터",
+    "page": "페이지",
     "ai": "인공지능",
     "home": "홈",
     "settings": "설정",

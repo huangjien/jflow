@@ -22,6 +22,10 @@
     "return_length": "We receive an answer from AI.\nAnswer length"
   },
   "header": {
+    "suite": "Suite",
+    "case": "Case",
+    "data": "Data",
+    "page": "Page",
     "home": "Home",
     "settings": "Settings",
     "ai": "AI",

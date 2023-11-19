@@ -22,6 +22,10 @@
     "return_length": "Fuair muid freagra ó AI.\nFad na freagra"
   },
   "header": {
+    "suite": "Sraith",
+    "case": "Cás",
+    "data": "Sonraí",
+    "page": "Leathanach",
     "ai": "Inteallacht fhíorchliste",
     "home": "Baile",
     "settings": "Socruithe",
