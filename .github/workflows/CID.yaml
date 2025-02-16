@@ -47,7 +47,7 @@ jobs:
         with:
           node-version: 22
 
-      - run: yarn install  --production
+      - run: yarn install --legacy-peer-deps
       - run: yarn lint
       - run: yarn build
 
