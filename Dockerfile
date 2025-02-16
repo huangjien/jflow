@@ -3,8 +3,7 @@ RUN apk add --no-cache libc6-compat
 WORKDIR /app
 
 COPY package.json ./
-RUN yarn upgrade
-RUN  yarn install
+RUN yarn install
 
 FROM node:22-alpine AS builder
 WORKDIR /app
