@@ -1,14 +1,44 @@
-import { dirname } from "path";
-import { fileURLToPath } from "url";
-import { FlatCompat } from "@eslint/eslintrc";
+import pluginNext from "@next/eslint-plugin-next";
+import parser from "@typescript-eslint/parser";
+import globals from "globals";
+import js from "@eslint/js";
+import eslintPluginPrettierRecommended from "eslint-plugin-prettier/recommended";
+import prettier from "eslint-plugin-prettier";
+import prettierConfig from "eslint-config-prettier";
 
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = dirname(__filename);
+export default [
+  {
+    name: "ESLint Config - nextjs",
+    languageOptions: {
+      parserOptions: {
+        ecmaVersion: "latest",
 
-const compat = new FlatCompat({
-  baseDirectory: __dirname,
-});
+        sourceType: "module",
+        ecmaFeatures: {
+          jsx: true,
+        },
+      },
+    },
 
-const eslintConfig = [...compat.extends("next/core-web-vitals")];
-
-export default eslintConfig;
+    ...js.configs.recommended,
+    plugins: {
+      "@next/next": pluginNext,
+      prettier: prettier,
+    },
+    files: ["**/*.{js,mjs,cjs,ts,jsx,tsx}"],
+    ignores: ["dist", "build", ".next", "node_modules"],
+    rules: {
+      ...pluginNext.configs.recommended.rules,
+      ...pluginNext.configs["core-web-vitals"].rules,
+      ...prettierConfig.rules,
+      "prettier/prettier": "warn",
+      "arrow-body-style": "off",
+      "prefer-arrow-callback": "off",
+      "no-unused-vars": 0,
+      "@typescript-eslint/no-explicit-any": ["off"],
+      "explicit-module-boundary-types": 0,
+      "no-non-null-assertion": 0,
+      "no-non-null-asserted-optional-chain": 0,
+    },
+  },
+];

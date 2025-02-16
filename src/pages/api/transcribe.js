@@ -7,9 +7,7 @@ export const config = {
   },
 };
 
-// eslint-disable-next-line import/no-anonymous-default-export, no-undef
 export default (req, res) =>
-  // eslint-disable-next-line no-undef
   new Promise((resolve, reject) => {
     const proxy = httpProxy.createProxy({
       ignorePath: true,
