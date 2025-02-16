@@ -45,10 +45,9 @@ jobs:
 
       - uses: actions/setup-node@v3
         with:
-          node-version: 21
+          node-version: 22
 
-      - run: npm install
-      - run: yarn install
+      - run: yarn install  --production
       - run: yarn lint
       - run: yarn build
 
