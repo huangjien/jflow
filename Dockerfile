@@ -4,7 +4,7 @@ WORKDIR /app
 
 COPY package.json package-lock.json yarn.lock ./
 RUN yarn upgrade
-RUN  yarn install --production
+RUN  yarn install
 
 FROM node:22-alpine AS builder
 WORKDIR /app
